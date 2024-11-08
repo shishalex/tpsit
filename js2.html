@@ -1,0 +1,61 @@
+<!DOCTYPE htmL>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name ="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>js1</title>
+   <style>
+       #button {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 24px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #c089f3;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+            }
+
+        #button:hover {background-color: blueviolet}
+
+        #button:active {
+            background-color: blueviolet;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+            }
+   </style>
+
+
+
+
+
+
+</head>
+<body>
+
+<p>JS1</p>
+
+<input type="text" name="" id = "mioinput1">
+
+<p>Secondo esercizio Java Script</p>
+
+<button id="button" onclick="aprifinestra()">Inserisce l'input e cliccami</button>
+
+<div>
+    <p id="out1">Ecco l'input che hai inserito: </p>
+</div>
+
+<script>
+    function aprifinestra(){
+        let i=document.getElementById("mioinput1").value
+        alert("ciao " + i);
+        document.getElementById("out1").innerHTML += i
+    } 
+</script>
+
+</body>
+</html>
