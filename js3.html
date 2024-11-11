@@ -1,0 +1,95 @@
+<!DOCTYPE htmL>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name ="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>js3</title>
+   <style>         
+        .Alessandro1{
+            background-color: lightgrey;
+            width: 200px;
+            height: 200px;
+            border: 15px solid red;
+            padding: 50px;
+            margin: 20px;          
+        }
+          
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 24px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #c089f3;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+            }
+
+        .button:hover {background-color: blueviolet}
+
+        .button:active {
+            background-color: blueviolet;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+            }
+   </style>
+
+
+
+
+
+
+</head>
+<body>
+    <p>JS3</p>
+
+    <div id = "testo1" class ="Alessandro1">
+        “Ognuno è un genio. Ma se si giudica un pesce dalla sua abilità di arrampicarsi sugli alberi lui passerà tutta la sua vita a credersi stupido.”
+        -Albert Einstein
+
+
+    </div>
+<button class= "button" onclick = "nascondiTesto('testo1')">Clicca per nascondere il testo</button>
+    <div id = "testo2" class ="Alessandro1">
+        “La sola conclusione possibile che le scienze sociali possono trarre è: alcuni lo fanno, altri no.” 
+        -Ernest Rutherford.
+
+
+    </div>
+    <button class= "button" onclick = "nascondiTesto('testo2')">Clicca per nascondere il testo</button>
+    <div id = "testo3" class = "Alessandro1">
+        “L'universo può crearsi dal nulla sulla base delle leggi della fisica. Non è necessario appellarsi a Dio per accendere la miccia e mettere in moto il processo.”
+        -Stephen Hawking
+
+
+    </div>
+    <button class= "button" onclick = "nascondiTesto('testo3')">Clicca per nascondere il testo</button>
+    <div id = "testo4" class = "Alessandro1"> 
+        "Che cosa impedisce alle stelle fisse di cadere l'una sull'altra?"
+        -Isaac Newton
+
+
+    </div>
+    <button class= "button" onclick = "nascondiTesto('testo4')">Clicca per nascondere il testo</button>
+    <div id = "testo5" class = "Alessandro1">
+        “Gli organismi viventi sono in equilibrio col loro ambiente, siccome l'ambiente cambia, debbono cambiare anch'essi, altrimenti sono condannati a scomparire.”
+        -Charles Darwin
+    </div>
+    <button class= "button" onclick = "nascondiTesto('testo5')">Clicca per nascondere il testo</button>
+
+    <script>
+        function nascondiTesto(idTesto) 
+        {
+        const testo = document.getElementById(idTesto);
+        testo.style.display = "none"; 
+        } 
+          </script>
+
+
+
+</body>
+</html>
