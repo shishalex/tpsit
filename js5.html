@@ -64,7 +64,7 @@ input:focus {
     color: #2E4053;
 }
 
-.btn {
+#btn {
   position: relative;
   font-size: 17px;
   text-transform: uppercase;
@@ -81,17 +81,17 @@ input:focus {
   background-color: white;
 }
 
-.btn:hover {
+#btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.btn:active {
+#btn:active {
   transform: translateY(-1px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.btn::after {
+#btn::after {
   content: "";
   display: inline-block;
   height: 100%;
@@ -104,11 +104,11 @@ input:focus {
   transition: all 0.4s;
 }
 
-.btn::after {
+#btn::after {
   background-color: #fff;
 }
 
-.btn:hover::after {
+#btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
 }
