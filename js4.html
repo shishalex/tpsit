@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        Body {
+            font-family: sans-serif;
+            background-color: #a1abe39c;
+        }
+
+        Div {
+            justify-content: center;
+            justify-items: center;
+        }
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  color: black;
+  font-size: 16px;
+  padding: 16px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container .btn:hover {
+  background-color: black;
+  color: white;
+}.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  color: black;
+  font-size: 16px;
+  padding: 16px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container .btn:hover {
+  background-color: black;
+  color: white;
+}
+        input[type=text] {
+            height: 50px;
+            width: 100px;
+            border: 5px solid rgb(156, 223, 246);
+            border-radius: 12px;
+        }
+
+        input:focus {
+            background-color: rgb(234, 247, 252);
+        }
+
+    </style>
+    <title>JS4</title>
+</head>
+
+<body>
+    <div>
+        <p></p>
+        <label for="partenza" style="font-weight: bold">Punto di Partenza : </label>
+        <input type="text" name="" id="Partenza">
+
+        <label for="pausa" style="font-weight: bold">Punto di Pausa : </label>
+        <input type="text" name="" id="Pausa">
+
+        <label for="arrivo" style="font-weight: bold">Punto d'arrivo : </label>
+        <input type="text" name="" id="arrivo">
+    </div>
+
+<div class="container">
+  <img src="https://www.montagna.tv/wp-content/uploads/2021/04/mountains-3111591_1920.jpg" alt="Snow" style="width:100%">
+<p id="output" style="font-weight: bold"> Risultato: </p>
+  <button class="btn" onclick="calcolo()">Clicca per calcolare il dislivello</button>
+</div>
+
+        <script>
+            const elementOut = document.getElementById("output");
+            function calcolo() {
+                let v1 = document.getElementById("Partenza").value;
+                let v2 = document.getElementById("Pausa").value;
+                let v3 = document.getElementById("arrivo").value;
+
+                let dislivello = v2 - v1;
+                let dislivello2 = v3 - v2;
+                let Somma = dislivello + dislivello2;
+
+
+
+                elementOut.innerHTML += " Il Dislivello è di " + Somma + " Metri";
+            }
+        </script>
+
+</body>
+
+</html>
