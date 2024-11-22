@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS5</title>
+    <style>
+
+body {
+    background: linear-gradient(to right, #d3a6f5, #cfa2a2);
+    font-family: Lucida, monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    color: #2C3E50;
+    font-weight: bold;
+}
+
+h2 {
+    color: 	#465f97;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #8f8e93;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #8f8e93;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #8f8e93;
+}
+
+.container {
+    background-color: #cfb7eb;
+    border-radius: 15px;
+    padding: 30px 40px;
+    width: 350px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #2E4053;
+}
+
+#button {
+  font-size: 1.5rem;
+  color: #292929;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid #fafafa;
+  background: #9974aa;
+  box-shadow: 3px 3px #fafafa;
+  cursor: pointer;
+  margin: 35px 0;
+}
+
+#button:active {
+  box-shadow: none;
+  transform: translate(3px, 3px);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+        padding-right: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+        padding-right: 45px;
+    }
+
+    input, button {
+        font-size: 14px;
+    }
+}
+    </style>
+</head>
+<body onload="start()">
+    <div class="container">
+        <h2>Calcolatore media di: </h2>
+        <h3 id="nome">NOME </h3>
+        <label for="num1">Primo voto:</label>
+        <input type="text" id="num1">
+        <br>
+        <label for="num2">Secondo voto:</label>
+        <input type="text" id="num2">
+        <br>
+        <label for="num3">Terzo voto:</label>
+        <input type="text" id="num3">
+        <br>
+        <label for="num4">Quarto voto:</label>
+        <input type="text" id="num4">
+        <br>
+        <label for="num5">Quinto voto:</label>
+        <input type="text" id="num5">
+        <br>
+        <div class="result">
+            <button id="button" onclick="calcManager()">Calcola la media</button>
+            <p id="out1" style="font-weight: bold"> La media è: </p>
+        </div>
+    </div>
+
+    <script>
+
+        function start() {
+            let n = prompt("Inserisci il tuo nome:")
+            document.getElementById("nome").innerHTML = n;
+        }
+
+        function averageValueCalculator(a, b, c, d, e) {
+            return (a + b + c + d + e) / 5;
+        }
+
+        const elementOut = document.getElementById("out1");
+
+        function calcManager() {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            const num3 = parseFloat(document.getElementById('num3').value);
+            const num4 = parseFloat(document.getElementById('num4').value);
+            const num5 = parseFloat(document.getElementById('num5').value);
+
+            if (isNaN(num1) || isNaN(num2) || isNaN(num3) || isNaN(num4) || isNaN(num5)) {
+                document.getElementById('result').innerText = "Per favore, inserisci tutti i numeri.";
+                return;
+            }
+
+            const media = averageValueCalculator(num1, num2, num3, num4, num5);
+
+            elementOut.innerHTML += ` ${media.toFixed(2)}`;
+        }
+
+    </script>
+
+</body>
+</html>
