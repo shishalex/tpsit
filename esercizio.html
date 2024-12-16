@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Il numero è: </h3>
+    <p id="out1"></p>
+    <h3>Il numero è pari?</h3>
+    <p id="out2"></p>
+    <h3>Il numero è primo?</h3>
+    <p id="out3"></p>
+    <h3>Il suo doppio è:</h3>
+    <p id="out4"></p>
+    <h3>La sua metà intera è:</h3>
+    <p id="out5"></p>
+    <h3>Il suo complemento è:</h3>
+    <p id="out6"></p>
+    <h3>La somma con il suo numero precedente è:</h3>
+    <p id="out7"></p>
+    <h3>La somma con il suo numero successivo è:</h3>
+    <p id="out8"></p>
+    <h3>Il numero moltiplicato per 3,14 è:</h3>
+    <p id="out9"></p>
+    <script>
+        let n=0
+        const output=document.getElementById("out1");
+        setInterval(number,5000)
+        function number(){
+            n=Math.floor(Math.random()*1000+1);
+            output.innerHTML = n
+            if(pariDispari(n)){
+            document.getElementById("out2").innerHTML="Il numero è dispari";
+        
+            }else{
+                document.getElementById("out2").innerHTML="Il numero è pari ";
+            }
+            if(IsPRIME(n)){
+            document.getElementById("out3").innerHTML="Il numero è primo";
+        
+            }else{
+                document.getElementById("out3").innerHTML="Il numero non è primo";
+            }
+            document.getElementById("out4").innerHTML=n*2;
+            document.getElementById("out5").innerHTML=Math.floor(n/2);
+            document.getElementById("out6").innerHTML=1000-n;
+            document.getElementById("out7").innerHTML=n+n-1;
+            document.getElementById("out8").innerHTML=n+n+1;
+            document.getElementById("out9").innerHTML=n*3,14;
+        }
+
+        function IsPRIME(n) {
+            let IsPRIME=true;
+            for(let i=2;i<(n/2);i++)
+                {
+                    if((n%i)==0)
+                        {
+                            IsPRIME=false;
+                        }
+                }
+                return IsPRIME;
+        }
+
+        function pariDispari(){
+            let pariDispari=true
+            if((n%2)==0){
+                pariDispari=false
+            }
+            return pariDispari
+        }
+
+    </script>
+</body>
+</html>
