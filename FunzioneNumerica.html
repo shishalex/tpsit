@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let n=1
+        let numeriConsecutivi=[];
+        function number(){
+            for(let i=0;i<10000;i++) {
+            let numeriConsecutivi=[]; 
+            let n=n++
+            numeriConsecutivi[i]=n
+            output.innerHTML = n
+            if(pariDispari(n)){
+            document.getElementById("out2").innerHTML="Il numero è dispari";
+        
+            }else{
+                document.getElementById("out2").innerHTML="Il numero è pari ";
+            }
+            if(IsPRIME(n)){
+            document.getElementById("out3").innerHTML="Il numero è primo";
+        
+            }else{
+                document.getElementById("out3").innerHTML="Il numero non è primo";
+            }
+            document.getElementById("out4").innerHTML=n*2;
+            document.getElementById("out5").innerHTML=Math.floor(n/2);
+            document.getElementById("out6").innerHTML=1000-n;
+            document.getElementById("out7").innerHTML=n+n-1;
+            document.getElementById("out8").innerHTML=n+n+1;
+            document.getElementById("out9").innerHTML=n*3,14;
+            }
+        }
+        function IsPRIME(n) {
+            let IsPRIME=true;
+            for(let i=2;i<(n/2);i++)
+                {
+                    if((n%i)==0)
+                        {
+                            IsPRIME=false;
+                        }
+                }
+                return IsPRIME;
+        }
+
+        function pariDispari(){
+            let pariDispari=true
+            if((n%2)==0){
+                pariDispari=false
+            }
+            return pariDispari
+        }
+
+        function calcManager() {
+            const out1 = parseFloat(document.getElementById('out1').value);
+            const out2 = parseFloat(document.getElementById('out2').value);
+            const out3 = parseFloat(document.getElementById('out3').value);
+            const out4 = parseFloat(document.getElementById('out4').value);
+            const out5 = parseFloat(document.getElementById('out5').value);
+            const out6 = parseFloat(document.getElementById('out6').value);
+            const out7 = parseFloat(document.getElementById('out7').value);
+            const out8 = parseFloat(document.getElementById('out8').value);
+            const out9 = parseFloat(document.getElementById('out9').value);
+        }
+        const line= "numero: "(out1)& " | "& (out2) &" | " &(out3)&" | "& "Il suo doppio è: "& (out4) &" | "& "La sua metà intera è: " (out5) &" | "& "Il suo complemento è: " (out6) &" | "& "La somma con il suo numero precedente è: " (out7) &" | " &"La somma con il suo numero precedente è: " &(out8) & " | " & "Il numero moltiplicato per 3,14 è:" & (out9) & "\n"
+    </script>
+</body>
+</html>
