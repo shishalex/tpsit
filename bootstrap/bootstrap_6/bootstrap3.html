@@ -1,0 +1,169 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Esempio Bootstrap</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+<style>
+  body {
+    background: linear-gradient(to right, #d3a6f5, #cfa2a2);
+    font-family: Lucida, monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+</style>
+  </head>
+  
+  <body>
+  
+  
+  <div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Domanda Password
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       <h3>Uno</h3>
+       Perché è importante usare una password complessa per gli account online? 
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Domanda 2FA
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       <h3>Due</h3>
+       Cos'è l'autenticazione a due fattori (2FA) e perché dovrei attivarla? 
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Domanda phishing
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       <h3>Tre</h3>
+       Come posso riconoscere un'email di phishing?
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Domanda Software
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+         <h3>Quattro</h3>
+         Perché è importante aggiornare regolarmente il software del mio dispositivo?
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            Domanda VPN
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+           <h3>Cinque</h3>
+           Perché usare una VPN per la sicurezza online?
+          </div>
+        </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="accordion" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        Risposta Password
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+      <div class="accordion-body">
+       <h3>Uno</h3>
+       Una password complessa è difficile da indovinare o decifrare da parte di hacker.<br> 
+       Combinare lettere maiuscole, minuscole, numeri e simboli rende la password più sicura e riduce il rischio che un attaccante possa accedere al tuo account tramite tentativi di forza bruta. 
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        Risposta 2FA
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h3>Due</h3>
+       L'autenticazione a due fattori aggiunge un ulteriore livello di sicurezza. Oltre alla password, richiede un secondo fattore, come un codice inviato al tuo telefono o un'app di autenticazione, per verificare la tua identità.<br>
+       Questo rende molto più difficile per chiunque accedere al tuo account, anche se conosce la tua password. 
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        Risposta Phishing
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h3>Tre</h3>
+       Un'email di phishing spesso contiene link sospetti, errori grammaticali o un'urgenza che ti spinge a fare clic su un link o a fornire informazioni personali.<br>
+       È importante non cliccare mai su link sospetti e verificare sempre l'indirizzo del mittente per assicurarti che sia legittimo. 
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+          Risposta Software
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+        <div class="accordion-body">
+         <h3>Quattro</h3>
+         Gli aggiornamenti correggono vulnerabilità nel software, riducendo il rischio di attacchi informatici e migliorando la protezione dei tuoi dati.
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+            Risposta VPN
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+          <div class="accordion-body">
+           <h3>Cinque</h3>
+           Una VPN protegge la tua privacy cifrando la connessione e nascondendo il tuo IP, rendendo più difficile per hacker e ISP monitorare la tua attività online.
+          </div>
+        </div>
+  </div>
+</div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> 
+    <script src="js/bootstrap.min.js" ></script>
+</body>
+</html>
+

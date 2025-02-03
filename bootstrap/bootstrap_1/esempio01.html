@@ -1,0 +1,227 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Esempio Bootstrap</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+  
+  <body>
+  
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" style="background-color:rgb(200,200,200);">
+  
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Sicurezza Online</a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Collegamento</a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Tendina
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Prima opzione</a></li>
+            <li><a class="dropdown-item" href="#">Seconda opzione</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Terza opzione</a></li>
+          </ul>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabilitato</a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+
+   <div class="container">
+
+    <p class="lead">
+      La sicurezza online è un aspetto cruciale per proteggere la nostra privacy e i nostri dati in un mondo sempre più digitalizzato. 
+    </p>
+    <p class="lead">
+      Con l'evoluzione della tecnologia, aumentano anche i rischi legati alla navigazione su Internet: attacchi informatici, furto di identità, malware e truffe online sono solo alcune delle minacce cui siamo esposti ogni giorno. 
+    </p>
+    <p class="lead">
+      Per proteggersi, è fondamentale adottare alcune buone pratiche, come l'uso di password complesse e uniche per ogni servizio, l'attivazione dell'autenticazione a due fattori (2FA) quando disponibile e l'aggiornamento regolare di software e sistemi operativi per evitare vulnerabilità.
+    </p>
+    <p class="lead">
+      Inoltre, è importante fare attenzione ai messaggi sospetti, come email di phishing, che mirano a carpire informazioni sensibili, e navigare con cautela sui social network, evitando di condividere dettagli troppo personali. 
+    </p>
+    <p class="lead">
+      L'uso di reti sicure, come quelle protette da password o VPN (Virtual Private Network), è essenziale, soprattutto quando si accede a informazioni delicate. 
+    </p>
+    <p class="lead">
+      Anche i dispositivi mobili non devono essere trascurati: l'installazione di antivirus e il download solo da fonti ufficiali sono accorgimenti fondamentali per una navigazione sicura. 
+    </p>
+    <p class="lead">
+      In sintesi, la sicurezza online richiede un impegno costante da parte di ciascun utente, ma adottando alcune semplici precauzioni possiamo ridurre significativamente il rischio di cadere vittima di attacchi informatici. 
+    </p>
+
+   </div>
+   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://images.unsplash.com/photo-1673897986805-3a0a2b6f3945?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1228&q=80" class="d-block w-100" alt="">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1677432658720-3d84f9d657b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDE0fDZzTVZqVExTa2VRfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" class="d-block w-100" alt="">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1677589066397-b8f7f2ef74bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="d-block w-100" alt="">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="container-fluid">
+
+    <div class="row">
+
+       <div class="col-md-9 col-md-pull-3" style="background-color:rgb(220,255,255);">
+          <h3>Contenuto</h3>
+          Testo scritto a casaccio purchè sufficientemente lungo per occupare abbastanza spazio.<br>
+          Lo metto anche su due righe. 
+       </div>
+       <div class="col-md-3 col-md-push-9" style="background-color:rgb(200,235,235);">
+          <h3>Laterale</h3>
+          Testo scritto a casaccio purchè sufficientemente lungo per occupare abbastanza spazio.<br>
+          Lo metto anche su due righe. 
+       </div>
+
+    </div>
+    
+    <hr>
+    
+ </div>
+
+ <div class="container">
+
+    <div class="row">
+
+       <div class="col-sm-8 offset-sm-2" style="background-color:rgb(220,220,220);">
+          Testo scritto a casaccio purchè sufficientemente lungo per occupare abbastanza spazio.<br>
+          Lo metto anche su due righe. 
+       </div>
+
+    </div>
+
+    <hr>
+    
+    <div class="row">
+
+       <div class="col-sm-4 col-6 col-md-6" style="background-color:rgb(220,220,255);">
+          Testo scritto a casaccio purchè sufficientemente lungo per occupare abbastanza spazio.<br>
+          Lo metto anche su due righe. 
+       </div>
+       <div class="col-sm-4 col-6 col-md-3" style="background-color:rgb(200,200,235);">
+          Testo scritto a casaccio purchè sufficientemente lungo per occupare abbastanza spazio.<br>
+          Lo metto anche su due righe. 
+       </div>
+       <div class="col-sm-4 col-12 col-md-3" style="background-color:rgb(180,180,215);">
+          Testo scritto a casaccio purchè sufficientemente lungo per occupare abbastanza spazio.<br>
+          Lo metto anche su due righe. 
+       </div>
+
+    </div>
+
+    <hr>
+
+    <div class="row">
+
+       <div class="col-md-2" style="background-color:rgb(255,220,255);">
+          Testo scritto a casaccio purchè sufficientemente lungo per occupare abbastanza spazio.<br>
+          Lo metto anche su due righe. 
+       </div>
+       <div class="col-md-3" style="background-color:rgb(235,200,235);">
+          Testo scritto a casaccio purchè sufficientemente lungo per occupare abbastanza spazio.<br>
+          Lo metto anche su due righe. 
+       </div>
+       <div class="col-md-7" style="background-color:rgb(215,180,215);">
+          Testo scritto a casaccio purchè sufficientemente lungo per occupare abbastanza spazio.<br>
+          Lo metto anche su due righe. 
+       </div>
+
+    </div>
+
+    <hr>
+
+    <div class="row">
+
+       <div class="col-6" style="background-color:rgb(255,220,220);">
+          Testo scritto a casaccio purchè sufficientemente lungo per occupare abbastanza spazio.<br>
+          Lo metto anche su due righe. 
+       </div>
+       <div class="col-6" style="background-color:rgb(235,200,200);">
+          Testo scritto a casaccio purchè sufficientemente lungo per occupare abbastanza spazio.<br>
+          Lo metto anche su due righe. 
+       </div>
+
+    </div>
+
+    <hr>
+
+    <div class="row">
+
+       <div class="col-lg-3" style="background-color:rgb(220,255,220);">
+          Testo scritto a casaccio purchè sufficientemente lungo per occupare abbastanza spazio.<br>
+          Lo metto anche su due righe. 
+       </div>
+       <div class="col-lg-9" style="background-color:rgb(200,235,200);">
+          Testo scritto a casaccio purchè sufficientemente lungo per occupare abbastanza spazio.<br>
+          Lo metto anche su due righe. 
+       </div>
+
+    </div>
+    
+</div>
+  
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> 
+    <script src="js/bootstrap.min.js" ></script>
+  </body>
+</html>
+
