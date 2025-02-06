@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bottoni Data e Ora</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #d3a6f5, #cfa2a2);
+            font-family: Lucida, monospace;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .button {
+            font-size: 18px;
+            border-radius: 10px;
+            background-color: rgb(208, 144, 228);
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        #extra-buttons {
+            display: none;
+        }
+        #out1 {
+            margin-top: 15px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <button id="main-button" class="button" onclick="showButtons()">Data e Ora</button>
+        <div id="extra-buttons">
+            <button class="button" onclick="Click()">Bottone 1</button>
+            <button class="button" onclick="Click()">Bottone 2</button>
+            <button class="button" onclick="Click()">Bottone 3</button>
+            <button class="button" onclick="Click()">Bottone 4</button>
+        </div>
+        <div id="out1"></div>
+    </div>
+
+    <script>
+        var primoclic = null;
+        function showButtons() {
+            var now = new Date();
+            document.getElementById("out1").innerText = now.toLocaleString();
+            document.getElementById("main-button").style.display = "none";
+            document.getElementById("extra-buttons").style.display = "block";
+        }
+        function Click() {
+            var now = new Date();
+            document.getElementById("out1").innerText = now.toLocaleString();
+
+            if (primoclic === null) {
+                primoclic = now.getTime();
+            } else {
+                var diff = now.getTime() - primoclic;
+                var listItem = document.createElement("p");
+                listItem.innerText = "Tempo trascorso: " + diff + " ms";
+                document.getElementById("out1").appendChild(listItem);
+            }
+        }
+    </script>
+</body>
+</html>
+</html>
