@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>test4</title>
+  <style type="text/css">
+    #container {
+      width: 800px;
+      height: 800px;
+      position: relative;
+      margin: 20px auto;
+    }
+
+    .box {
+      height: 100px;
+      width: 100px;
+      position: absolute;
+      text-align: center;
+      font-size: 20px;
+      border: solid black 1px;
+    }
+
+    #B {
+      background-color: blue;
+    }
+
+    #C {
+      background-color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div id="B" class="box"></div>
+    <div id="C" class="box"></div>
+  </div>
+
+  <script language="JavaScript">
+    function getRandomPosition(containerWidth, containerHeight) {
+      const maxX = containerWidth - 100;
+      const maxY = containerHeight - 100;
+      return {
+        x: Math.floor(Math.random() * maxX),
+        y: Math.floor(Math.random() * maxY)
+      };
+    }
+
+    function checkOverlap(a, b) {
+      const rect1 = a.getBoundingClientRect();
+      const rect2 = b.getBoundingClientRect();
+      return !(
+        rect1.right < rect2.left ||
+        rect1.left > rect2.right ||
+        rect1.bottom < rect2.top ||
+        rect1.top > rect2.bottom
+      );
+    }
+
+    function muovi() {
+      const b = document.getElementById('B');
+      const c = document.getElementById('C');
+      const container = document.getElementById('container');
+
+      const pos1 = getRandomPosition(container.clientWidth, container.clientHeight);
+      const pos2 = getRandomPosition(container.clientWidth, container.clientHeight);
+
+      b.style.left = pos1.x + "px";
+      b.style.top = pos1.y + "px";
+
+      c.style.left = pos2.x + "px";
+      c.style.top = pos2.y + "px";
+
+      setTimeout(function () {
+        if (checkOverlap(b, c)) {
+          b.style.backgroundColor = "red";
+          c.style.backgroundColor = "red";
+        } else {
+          b.style.backgroundColor = "blue";
+          c.style.backgroundColor = "yellow";
+        }
+      }, 300);
+    }
+
+    var interval = setInterval(muovi, 500);
+  </script>
+</body>
+</html>
